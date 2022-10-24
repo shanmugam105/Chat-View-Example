@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutgoingMessageTableViewCell" rowHeight="144" id="KGk-i7-Jjw" customClass="OutgoingMessageTableViewCell" customModule="Chat_View_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="475" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rps-Lf-7Mo">
+                        <rect key="frame" x="266" y="16" width="201" height="112"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my new message" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-Qr-rvQ">
+                                <rect key="frame" x="8" y="8" width="185" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:30 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acC-gx-vzd">
+                                <rect key="frame" x="8" y="87" width="185" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="vAe-9K-08f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="F6u-Dt-jwW"/>
+                            <constraint firstItem="JB6-Qr-rvQ" firstAttribute="top" secondItem="rps-Lf-7Mo" secondAttribute="top" constant="8" id="GXa-4O-H5S"/>
+                            <constraint firstItem="acC-gx-vzd" firstAttribute="top" secondItem="JB6-Qr-rvQ" secondAttribute="bottom" constant="8" id="QNs-YY-zkv"/>
+                            <constraint firstItem="acC-gx-vzd" firstAttribute="leading" secondItem="JB6-Qr-rvQ" secondAttribute="leading" id="Rkf-ZU-hTA"/>
+                            <constraint firstItem="acC-gx-vzd" firstAttribute="trailing" secondItem="JB6-Qr-rvQ" secondAttribute="trailing" id="Ymx-AB-Qgb"/>
+                            <constraint firstAttribute="trailing" secondItem="JB6-Qr-rvQ" secondAttribute="trailing" constant="8" id="gVj-mV-Dfr"/>
+                            <constraint firstItem="JB6-Qr-rvQ" firstAttribute="leading" secondItem="rps-Lf-7Mo" secondAttribute="leading" constant="8" id="pyb-LL-IzD"/>
+                            <constraint firstAttribute="bottom" secondItem="acC-gx-vzd" secondAttribute="bottom" constant="8" id="wZq-IF-XHa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rps-Lf-7Mo" secondAttribute="trailing" constant="8" id="HIw-pE-6Fk"/>
+                    <constraint firstItem="rps-Lf-7Mo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="T63-X2-VLI"/>
+                    <constraint firstAttribute="bottom" secondItem="rps-Lf-7Mo" secondAttribute="bottom" constant="16" id="Yew-EB-LGI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="rps-Lf-7Mo" id="L9T-lP-kyj"/>
+                <outlet property="messageLabel" destination="JB6-Qr-rvQ" id="MKv-sM-AU0"/>
+                <outlet property="timeLabel" destination="acC-gx-vzd" id="dep-mh-5bW"/>
+            </connections>
+            <point key="canvasLocation" x="-123.91304347826087" y="14.0625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
